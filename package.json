@@ -1,0 +1,28 @@
+{
+  "name": "@diegoti/simple-jwt-authentication-util",
+  "version": "1.0.0",
+  "description": "Validates the token and adds authenticated user information to the express request object",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoTorres/simple-jwt-authentication-util.git"
+  },
+  "keywords": [
+    "authenticated",
+    "use",
+    "express"
+  ],
+  "author": " <diegotorres.rj@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoTorres/simple-jwt-authentication-util/issues"
+  },
+  "homepage": "https://github.com/DiegoTorres/simple-jwt-authentication-util#readme",
+  "dependencies": {
+    "@diegoti/simple-error-handler-for-express": "^1.0.1",
+    "jsonwebtoken": "8.5.1"
+  }
+}
