@@ -23,6 +23,6 @@
   "homepage": "https://github.com/DiegoTorres/simple-jwt-authentication-util#readme",
   "dependencies": {
     "@diegoti/simple-error-handler-for-express": "^1.0.1",
-    "jsonwebtoken": "8.5.1"
+    "jsonwebtoken": "9.0.2"
   }
 }
