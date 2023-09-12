@@ -1,6 +1,6 @@
 {
   "name": "@diegoti/simple-jwt-authentication-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validates the token and adds authenticated user information to the express request object",
   "main": "index.js",
   "scripts": {
