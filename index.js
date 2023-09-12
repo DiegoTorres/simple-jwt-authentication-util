@@ -35,14 +35,17 @@ const createToken = (payload) => {
 };
 
 const checkTokenAndSetDataToRequest = function (req, res, next) {
-  const token = getBearerTokenFromAuthorizationHeader(req.headers);
-  const TOKEN_SECRET_KEY = (process.env.TOKEN_SECRET_KEY || '').trim();
+  try {
+    const token = getBearerTokenFromAuthorizationHeader(req.headers);
+    const TOKEN_SECRET_KEY = (process.env.TOKEN_SECRET_KEY || '').trim();
 
-  jsonwebtoken.verify(token, TOKEN_SECRET_KEY, (err, decoded) => {
-    if (err) throw new Unauthorized(err.message);
+    const decoded = jsonwebtoken.verify(token, TOKEN_SECRET_KEY);
     req.authenticatedUser = decoded;
-    next();
-  });
+  } catch (error) {
+    throw new Unauthorized(error.message);
+  }
+
+  next();
 };
 
 module.exports = {
